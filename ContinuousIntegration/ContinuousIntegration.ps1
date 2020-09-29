@@ -8,6 +8,8 @@ foreach ($module in $modules) {
     Import-Module $module -Force -PassThru
 }
 
+Get-ChildItem ..\*.ipynb
 foreach ($notebook in Get-ChildItem ..\*.ipynb) {
-    Invoke-ExecuteNotebook -InputNotebook $notebook.FullName
+    $notebook
+    # Invoke-ExecuteNotebook -InputNotebook $notebook.FullName
 }
