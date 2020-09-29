@@ -15,5 +15,5 @@ foreach ($module in $modules) {
 # Get-ChildItem
 # Get-ChildItem ..\*.ipynb
 foreach ($notebook in Get-ChildItem . *.ipynb) {
-    Invoke-ExecuteNotebook -InputNotebook $notebook.FullName -OutputNotebook ./newNotebook.ipynb
+    Invoke-ExecuteNotebook -InputNotebook $notebook.FullName -OutputNotebook ./newNotebook.ipynb -Parameters @{a = 30 }
 }

@@ -18,3 +18,7 @@ jobs:
     - name: Run Continuous Integration
       run : ./ContinuousIntegration/ContinuousIntegration.ps1
       shell: pwsh
+    - uses: actions/upload-artifact@v2
+      with:
+        name: newNotebook.ipynb
+        path: ./newNotebook.ipynb
