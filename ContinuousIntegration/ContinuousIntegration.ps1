@@ -9,11 +9,11 @@ foreach ($module in $modules) {
 }
 
 # "test"
-$pwd.path
-Get-ChildItem . -r *.ipynb | ForEach-Object FullName
+# $pwd.path
+# Get-ChildItem . -r *.ipynb | ForEach-Object FullName
 
 # Get-ChildItem
 # Get-ChildItem ..\*.ipynb
-# foreach ($notebook in Get-ChildItem \*.ipynb) {
-#     Invoke-ExecuteNotebook -InputNotebook $notebook.FullName
-# }
+foreach ($notebook in Get-ChildItem . *.ipynb) {
+    Invoke-ExecuteNotebook -InputNotebook $notebook.FullName
+}
