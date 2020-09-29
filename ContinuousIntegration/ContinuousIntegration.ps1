@@ -9,5 +9,5 @@ foreach ($module in $modules) {
 }
 
 foreach ($notebook in Get-ChildItem ..\*.ipynb) {
-    Invoke-ExecuteNotebook -InputNotebook $_.FullName
+    Invoke-ExecuteNotebook -InputNotebook $notebook.FullName
 }
