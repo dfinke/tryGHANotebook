@@ -8,13 +8,15 @@ foreach ($module in $modules) {
     Import-Module $module -Force -PassThru
 }
 
-# "test"
-# $pwd.path
-# Get-ChildItem . -r *.ipynb | ForEach-Object FullName
+# foreach ($notebook in Get-ChildItem . *.ipynb) {    
+#     $fileName = Split-Path $notebook.FullName -leaf
+#     $fileName = 'new-' + $fileName
+#     $outputFullName = "$($pwd.Path)\$fileName"
+#     Invoke-ExecuteNotebook -InputNotebook $notebook.FullName -OutputNotebook $outputFullName -Parameters @{a = 30 }
+# }
 
-# Get-ChildItem
-# Get-ChildItem ..\*.ipynb
-foreach ($notebook in Get-ChildItem . *.ipynb) {    
+Get-ChildItem . *.ipynb | ForEach-Object {
+    $notebook = $_
     $fileName = Split-Path $notebook.FullName -leaf
     $fileName = 'new-' + $fileName
     $outputFullName = "$($pwd.Path)\$fileName"
