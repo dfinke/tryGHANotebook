@@ -15,7 +15,7 @@ foreach ($module in $modules) {
 #     Invoke-ExecuteNotebook -InputNotebook $notebook.FullName -OutputNotebook $outputFullName -Parameters @{a = 30 }
 # }
 
-Get-ChildItem . *.ipynb | ForEach-Object {
+Get-ChildItem . *.ipynb | ForEach-Object -parallel {
     $notebook = $_
     $fileName = Split-Path $notebook.FullName -leaf
     $fileName = 'new-' + $fileName
