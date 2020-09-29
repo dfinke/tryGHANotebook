@@ -10,6 +10,7 @@ foreach ($module in $modules) {
 
 "test"
 $pwd
+Get-ChildItem
 Get-ChildItem ..\*.ipynb
 foreach ($notebook in Get-ChildItem ..\*.ipynb) {
     $notebook
