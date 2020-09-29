@@ -21,5 +21,5 @@ jobs:
       shell: pwsh
     - uses: actions/upload-artifact@v2
       with:
-        name: newNotebook.ipynb
-        path: ./newNotebook.ipynb
+        name: Generated-Notebooks
+        path: ./new*.ipynb
