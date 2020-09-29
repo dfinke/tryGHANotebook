@@ -8,6 +8,8 @@ foreach ($module in $modules) {
     Import-Module $module -Force -PassThru
 }
 
+"test"
+$pwd
 Get-ChildItem ..\*.ipynb
 foreach ($notebook in Get-ChildItem ..\*.ipynb) {
     $notebook
